@@ -11,6 +11,11 @@ public class DashboardPage {
 
     public static By menuDashboardTotal = By.xpath("//ul[@id='side-menu']");
 
+    private String totalInvoicesAwaitingPaymentExpected = "3 / 4";
+    private String totalConvertedLeadsExpected = "6 / 12";
+    private String totalProjectsInProgressExpected = "26 / 27";
+    private String totalTasksNotFinishedExpected = "19 / 21";
+
     public static By menuDashboard = By.xpath("//span[normalize-space()='Dashboard']");
     private By menuReports = By.xpath("//span[normalize-space()='Reports']");
     public static By menuCustomer = By.xpath("//span[normalize-space()='Customers']");
@@ -90,11 +95,10 @@ public class DashboardPage {
 
     public void verifyCheckboxQuickStatistics() {
         SoftAssert softAssert = new SoftAssert();
+
         WebUI.sleep(1);
         softAssert.assertTrue(WebUI.checkElementIsSelected(checkboxQuickStatistics), "Fail. The value of the checkbox Quick Statistics NOT match");
         softAssert.assertTrue(WebUI.checkElementDisplayed(sectionQuickStatistics), "Fail. The section Quick Statistics NOT display");
-        System.out.println("Section Quick Statistics is: ");
-        System.out.println(WebUI.getElementText(sectionQuickStatistics));
         softAssert.assertAll();
     }
 
@@ -102,14 +106,17 @@ public class DashboardPage {
         WebUI.sleep(1);
         Assert.assertFalse(WebUI.checkElementIsSelected(checkboxQuickStatistics), "Fail. The checkbox Quick Statistics được tick");
         Assert.assertFalse(WebUI.checkElementDisplayed(sectionQuickStatistics), "Fail. The section Quick Statistics display");
-
+        WebUI.sleep(5);
+        WebUI.clickElement(checkboxQuickStatistics);
+        WebUI.waitForPageLoaded();
     }
 
     public void checkTotalInvoicesAwaitingPayment() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(WebUI.checkElementExist(totalInvoicesAwaitingPayment), "The InvoicesAwaitingPayment NOT exits.");
-        softAssert.assertTrue(WebUI.checkElementDisplayed(totalInvoicesAwaitingPayment), "The InvoicesAwaitingPayment Not displays");
-        softAssert.assertEquals(WebUI.getElementText(totalInvoicesAwaitingPayment), "3 / 4", "FAIL. Total InvoicesAwaitingPayment NOT match.");
+        softAssert.assertTrue(WebUI.checkElementExist(totalInvoicesAwaitingPayment), "The Invoices Awaiting Payment NOT exits.");
+        softAssert.assertTrue(WebUI.checkElementDisplayed(totalInvoicesAwaitingPayment), "The Invoices Awaiting Payment Not displays");
+        softAssert.assertEquals(WebUI.getElementText(totalInvoicesAwaitingPayment), totalInvoicesAwaitingPaymentExpected, "FAIL. Total Invoices Awaiting Payment NOT match.");
+        System.out.println("\uD83C\uDF3ATotal Invoices Awaiting Payment: " + WebUI.getElementText(totalInvoicesAwaitingPayment));
         softAssert.assertAll();
     }
 
@@ -117,7 +124,8 @@ public class DashboardPage {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(WebUI.checkElementExist(totalConvertedLeads), "The Converted Leads NOT exits.");
         softAssert.assertTrue(WebUI.checkElementDisplayed(totalConvertedLeads), "The Converted Leads Not displays");
-        softAssert.assertEquals(WebUI.getElementText(totalConvertedLeads), "6 / 11", "FAIL. Total Converted Leads NOT match.");
+        softAssert.assertEquals(WebUI.getElementText(totalConvertedLeads), totalConvertedLeadsExpected, "FAIL. Total Converted Leads NOT match.");
+        System.out.println("\uD83C\uDF3AConverted Leads: " + WebUI.getElementText(totalConvertedLeads));
         softAssert.assertAll();
     }
 
@@ -125,7 +133,8 @@ public class DashboardPage {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(WebUI.checkElementExist(totalProjectsInProgress), "The Projects In Progress NOT exits.");
         softAssert.assertTrue(WebUI.checkElementDisplayed(totalProjectsInProgress), "The Projects In Progress Not displays");
-        softAssert.assertEquals(WebUI.getElementText(totalProjectsInProgress), "4 / 4", "FAIL. Total Projects In Progress NOT match.");
+        softAssert.assertEquals(WebUI.getElementText(totalProjectsInProgress), totalProjectsInProgressExpected, "FAIL. Total Projects In Progress NOT match.");
+        System.out.println("\uD83C\uDF3AProjects In Progress: " + WebUI.getElementText(totalProjectsInProgress));
         softAssert.assertAll();
     }
 
@@ -133,7 +142,8 @@ public class DashboardPage {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(WebUI.checkElementExist(totalTasksNotFinished), "The Tasks Not Finished NOT exits.");
         softAssert.assertTrue(WebUI.checkElementDisplayed(totalTasksNotFinished), "The Tasks Not Finished Not displays");
-        softAssert.assertEquals(WebUI.getElementText(totalTasksNotFinished), "7 / 8", "FAIL. Total Tasks Not Finished NOT match.");
+        softAssert.assertEquals(WebUI.getElementText(totalTasksNotFinished), totalTasksNotFinishedExpected, "FAIL. Total Tasks Not Finished NOT match.");
+        System.out.println("\uD83C\uDF3ATasks Not Finished: " + WebUI.getElementText(totalTasksNotFinished));
         softAssert.assertAll();
     }
 
@@ -141,7 +151,6 @@ public class DashboardPage {
     public void verifyMenuReportDisplay() {
         WebUI.waitForPageLoaded();
         Assert.assertTrue(WebUI.checkElementExist(menuReports), "Menu report NOT exit.");
-        //Assert.assertTrue(DriverManager.getDriver().findElement(menuReports).isDisplayed(), "Menu report Not displayed.");
         Assert.assertTrue(WebUI.checkElementDisplayed(menuReports), "Menu report Not displayed.");
     }
 

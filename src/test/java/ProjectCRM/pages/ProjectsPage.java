@@ -19,7 +19,7 @@ public class ProjectsPage {
     private String headerProjectExpected = "Projects Summary";
 
     private String totalNotStartedExpected = "0";
-    private String totalInProgressExpected = "23";
+    private String totalInProgressExpected = "26";
     private String totalOnHoldExpected = "0";
     private String totalCancelledExpected = "0";
     private String totalFinishedExpected = "1";

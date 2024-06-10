@@ -15,8 +15,8 @@ public class CustomersPage {
 
     private String headerCustomerContent = "Customers Summary";
 
-    private String totalTotalCustomersExpected = "458";
-    private String totalActiveCustomersExpected = "441";
+    private String totalTotalCustomersExpected = "468";
+    private String totalActiveCustomersExpected = "451";
     private String totalInactiveCustomersExpected = "17";
     private String totalActiveContactsExpected = "16";
     private String totalInactiveContactsExpected = "1";

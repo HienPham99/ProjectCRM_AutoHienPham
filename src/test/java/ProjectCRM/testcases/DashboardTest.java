@@ -33,8 +33,8 @@ public class DashboardTest extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void checkSectionQuickStatisticsSelected(){
-        loginPage=new LoginPage();
+    public void checkSectionQuickStatisticsSelected() {
+        loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
         ExcelHelper excelHelper = new ExcelHelper();
         excelHelper.setExcelFile("src/test/resources/testdata/DataLogin.xlsx", "Sheet1");
@@ -48,8 +48,8 @@ public class DashboardTest extends BaseTest {
     }
 
     @Test(priority = 3)
-    public void checkSectionQuickStatisticsUntick(){
-        loginPage=new LoginPage();
+    public void checkSectionQuickStatisticsUntick() {
+        loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
         ExcelHelper excelHelper = new ExcelHelper();
         excelHelper.setExcelFile("src/test/resources/testdata/DataLogin.xlsx", "Sheet1");

@@ -15,7 +15,7 @@ public class TasksTest extends BaseTest {
     DashboardPage dashboardPage;
     TasksPage tasksPage;
 
-    private String SUBJECT = "AutoTestA1";
+    private String SUBJECT = "QCHNTeam";
 
 
     @Test(priority = 1)

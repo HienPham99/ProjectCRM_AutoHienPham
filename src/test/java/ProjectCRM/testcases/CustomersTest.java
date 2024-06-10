@@ -22,7 +22,7 @@ public class CustomersTest extends BaseTest {
     DashboardPage dashboardPage;
     CustomersPage customersPage;
 
-    private String COMPANY_NAME = "Merkle Blucom A2";
+    private String COMPANY_NAME = "Merkle VietNamA3";
     private String searchValue = "Merkle";
 
     @Test(priority = 1)

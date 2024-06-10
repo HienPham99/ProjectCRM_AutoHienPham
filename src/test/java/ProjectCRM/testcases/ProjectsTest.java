@@ -16,7 +16,7 @@ public class ProjectsTest extends BaseTest {
     DashboardPage dashboardPage;
     ProjectsPage projectsPage;
 
-    private String PROJECT_NAME = "Merkle softwareA5";
+    private String PROJECT_NAME = "Merkle Blucomerce";
     private String searchValue = "Merkle";
 
 

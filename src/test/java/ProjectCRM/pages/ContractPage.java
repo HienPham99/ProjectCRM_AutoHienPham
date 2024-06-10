@@ -12,10 +12,10 @@ import java.util.ArrayList;
 public class ContractPage {
 
     private String headerContractExpected = "Contract Summary";
-    private String totalActiveExpected = "13";
+    private String totalActiveExpected = "15";
     private String totalExpiredExpected = "1";
     private String totalAboutToExpireExpected = "1";
-    private String totalRecentlyAddedExpected = "11";
+    private String totalRecentlyAddedExpected = "13";
     private String totalTrashExpected = "0";
 
     private String notiMessageExpected = "Contract added successfully";

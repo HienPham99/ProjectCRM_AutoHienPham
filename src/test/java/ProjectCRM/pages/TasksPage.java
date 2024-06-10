@@ -15,7 +15,7 @@ public class TasksPage {
     private String headerTasksExpected = "Tasks Summary";
 
     private String totalNotStartedExpected = "1";
-    private String totalInProgressExpected = "13";
+    private String totalInProgressExpected = "18";
     private String totalTestingExpected = "0";
     private String totalAwaitingFeedbackExpected = "0";
     private String totalCompleteExpected = "2";
@@ -194,7 +194,5 @@ public class TasksPage {
         WebUI.waitForPageLoaded();
         verifyAddTaskSuccess();
     }
-
-
 
 }

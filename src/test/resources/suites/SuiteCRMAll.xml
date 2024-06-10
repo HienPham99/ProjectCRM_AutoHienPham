@@ -18,37 +18,33 @@
         </classes>
     </test>
 
-<!--    <test name="ProjectCRM" parallel="methods">-->
-<!--        <parameter name="browser" value="edge"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="ProjectCRM.testcases.LoginTest"/>-->
-<!--            <class name="ProjectCRM.testcases.ForgotPasswordTest"/>-->
-<!--            <class name="ProjectCRM.testcases.DashboardTest"/>-->
-<!--            <class name="ProjectCRM.testcases.CustomersTest"/>-->
-<!--            <class name="ProjectCRM.testcases.SalesTest"/>-->
-<!--            <class name="ProjectCRM.testcases.SubscriptionsTest"/>-->
-<!--            <class name="ProjectCRM.testcases.ExpensesTest"/>-->
-<!--            <class name="ProjectCRM.testcases.ContractTest"/>-->
-<!--            <class name="ProjectCRM.testcases.ProjectsTest"/>-->
-<!--            <class name="ProjectCRM.testcases.TasksTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="ProjectCRM" parallel="methods">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="ProjectCRM.testcases.LoginTest"/>
+            <class name="ProjectCRM.testcases.DashboardTest"/>
+            <class name="ProjectCRM.testcases.CustomersTest"/>
+            <class name="ProjectCRM.testcases.SalesTest"/>
+            <class name="ProjectCRM.testcases.ExpensesTest"/>
+            <class name="ProjectCRM.testcases.ContractTest"/>
+            <class name="ProjectCRM.testcases.ProjectsTest"/>
+            <class name="ProjectCRM.testcases.TasksTest"/>
+        </classes>
+    </test>
 
-<!--    <test name="ProjectCRM" parallel="methods">-->
-<!--        <parameter name="browser" value="firefox"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="ProjectCRM.testcases.LoginTest"/>-->
-<!--            <class name="ProjectCRM.testcases.ForgotPasswordTest"/>-->
-<!--            <class name="ProjectCRM.testcases.DashboardTest"/>-->
-<!--            <class name="ProjectCRM.testcases.CustomersTest"/>-->
-<!--            <class name="ProjectCRM.testcases.SalesTest"/>-->
-<!--            <class name="ProjectCRM.testcases.SubscriptionsTest"/>-->
-<!--            <class name="ProjectCRM.testcases.ExpensesTest"/>-->
-<!--            <class name="ProjectCRM.testcases.ContractTest"/>-->
-<!--            <class name="ProjectCRM.testcases.ProjectsTest"/>-->
-<!--            <class name="ProjectCRM.testcases.TasksTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="ProjectCRM" parallel="methods">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="ProjectCRM.testcases.LoginTest"/>
+            <class name="ProjectCRM.testcases.DashboardTest"/>
+            <class name="ProjectCRM.testcases.CustomersTest"/>
+            <class name="ProjectCRM.testcases.SalesTest"/>
+            <class name="ProjectCRM.testcases.SubscriptionsTest"/>
+            <class name="ProjectCRM.testcases.ContractTest"/>
+            <class name="ProjectCRM.testcases.ProjectsTest"/>
+            <class name="ProjectCRM.testcases.TasksTest"/>
+        </classes>
+    </test>
 
 
 </suite>
