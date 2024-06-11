@@ -52,10 +52,9 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         LogUtils.error("❌☘️☘️☘️===>TestFailure: " + result.getName()+ " is FAILED. ❌❌❌❌❌");
-        //CaptureHelper.takeScreenshot(result.getName());
         CaptureHelper.captureScreenshot(result.getName());
         CaptureHelper.stopRecord();
-        //Extent report
+
         ExtentTestManager.addScreenShot(result.getName());
         ExtentTestManager.logMessage(Status.FAIL, result.getThrowable().toString());//Lấy ra lý do lỗi
         ExtentTestManager.logMessage(Status.FAIL,result.getName() + " is Failed.");
